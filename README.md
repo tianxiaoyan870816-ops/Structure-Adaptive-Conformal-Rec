@@ -46,18 +46,20 @@ The contribution of the paper is the **evaluation framework** and the **boundary
 
 ## Repository contents
 
-This repository currently provides the **experimental result files** (JSON) for all datasets, seeds, and methods, together with the framework figure:
+This repository provides the **experimental result files** (JSON) behind the paper's tables and figures, together with the framework figure:
 
 ```
 results/
-├── baseline_cp/          # Static CP, ACI, CRC across recommender backbones
-├── conditional_cp/       # per-group conditional coverage
-├── lambda_sensitivity/   # λ_KG sensitivity sweep
-├── kg_dropout/           # KG edge-dropout robustness
-└── kg_conflict/          # KG noise / conflict robustness
+├── main/         # per-configuration metrics for each dataset and seed:
+│                 #   retrieval inclusion @ K, within-pool coverage,
+│                 #   end-to-end coverage, average prediction-set size
+│                 #   (5 configurations × 3 datasets × 3 seeds)
+└── stratified/   # per-slice within-pool coverage on the deployment-observable
+                  #   axes (user activity, item popularity) and the KG-similarity
+                  #   diagnostic axis, per dataset and seed
 ```
 
-Each JSON file contains: `dataset`, `seed`, `method`, `alpha`, `coverage`, `avg_set_size`, `median_set_size`, `cumulative_regret`, `avg_uncertainty`, `n_test`. All experiments use 3 random seeds (42, 43, 44).
+The five configurations are Vanilla-FIXED (SAOCP-style baseline), Topology-only, Uncertainty-only, Full-FIXED, and Full-RISK. All experiments use 3 random seeds (42, 43, 44).
 
 > **The full source code** (KGUP, SA-OKAC, KG topology preprocessing, the training/evaluation pipeline, and the calibrator/backbone baselines) **will be released in this repository upon acceptance.**
 
