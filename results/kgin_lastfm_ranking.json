@@ -1,8 +1,0 @@
-[
-  {
-    "model": "KGIN",
-    "dataset_seed": "last-fm_s42",
-    "recall@20": 0.8823,
-    "ndcg@20": 0.7138
-  }
-]
