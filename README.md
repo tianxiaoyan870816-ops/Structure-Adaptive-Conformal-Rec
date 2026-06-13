@@ -1,4 +1,4 @@
-# From Pool-Conditioned Coverage to Deployment Validity in Conformal Recommendation: A Full-Catalog Evaluation Framework
+# RECAP — REtrieval-aware Conformal Accounting Protocol
 
 [![Paper](https://img.shields.io/badge/Paper-Under_Review-orange.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@ Official repository for the paper:
 >
 > Xiaoyan Tian, Min Yu, Naihan Han, Zhihao Wang
 >
-> *Under review at Expert Systems with Applications*
+> *Under review*
 
 <p align="center">
   <img src="figures/framework.png" width="95%" alt="Framework Overview"/>
@@ -19,7 +19,7 @@ Official repository for the paper:
 
 ## Overview
 
-This repository accompanies a **validity-accounting framework** for conformal prediction in **retrieve-then-calibrate** recommendation. Rather than proposing a method that improves a headline metric, the paper asks a measurement question: once a top-*K* retrieval stage is in place, **when does a knowledge-graph (KG) or uncertainty correction actually change the calibrated prediction set — and when is it inert?**
+This repository accompanies **RECAP** (REtrieval-aware Conformal Accounting Protocol), a **validity-accounting framework** for conformal prediction in **retrieve-then-calibrate** recommendation. Rather than proposing a method that improves a headline metric, the paper asks a measurement question: once a top-*K* retrieval stage is in place, **when does a knowledge-graph (KG) or uncertainty correction actually change the calibrated prediction set — and when is it inert?**
 
 The framework reports **retrieval inclusion**, **within-pool conformal coverage**, and **end-to-end coverage** as *separate* quantities, and stratifies within-pool coverage along **deployment-observable** axes (user activity and item popularity).
 
@@ -77,7 +77,7 @@ The five configurations are Vanilla-FIXED (SAOCP-style baseline), Topology-only,
 @article{tian2026validity,
   title={From Pool-Conditioned Coverage to Deployment Validity in Conformal Recommendation: A Full-Catalog Evaluation Framework},
   author={Tian, Xiaoyan and Yu, Min and Han, Naihan and Wang, Zhihao},
-  journal={Under review at Expert Systems with Applications},
+  journal={Under review},
   year={2026}
 }
 ```
